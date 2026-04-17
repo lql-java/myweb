@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.image{
+	background: url(../image/background.png);
+	width: 100%;
+}
+.form{	
+	border-radius: 10px;
+	width: 300px;
+	padding: 10px;
+	position: absolute;
+	right: 300px;
+	top: 240px;
+	display: flex;
+	z-index: 100;
+	background-color: #FFFFFF;
+	/* box-shadow: #fffff0 3px 3px; */
+}
+.form .name,.tel,.email,.check,.password{
+	width: 100%;
+	height: 35px;
+	text-indent: 20px;
+	border: #FFFFFF solid 1px;
+	/* background: #FFFFFF; */
+	font-size: 18px;
+	border-radius: 5px;
+	margin-left: 20px;
+}
+.form .submit{
+	width: 100%;
+	height: 26px;
+	border: 1px solid black;
+	margin-left: 30px;
+	color: #000;
+	/* background-color: #FFFFFF; */
+	text-align: center;
+	font-size: 20px;
+	font-family: "宋体";
+	border-radius: 6px;
+	box-shadow: #fffff0 3px 3px;
+}
+.form .reset{
+	float: left;
+	width:100px;
+	margin-left: 30px;
+	margin-top: 10px;
+	color:black;
+	border: 0px;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+}
+.form .login{
+	float: right;
+	width: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border: 0px;
+	
+	border-radius: 3px;
+	text-align: center;
+}
+.form .login a{
+	text-decoration: none;
+	color: #000;
+}
+.form .name{
+	background: url(../image/1.jpg) no-repeat 5px center ;
+	
+}
+.form .tel{
+	background: url(../image/phone.jpg) no-repeat 5px center ;
+}
+.form .email{
+	background: url(../image/eml.jpg) no-repeat 5px center ;
+}
+.form .check{
+	background: url() no-repeat 5px center ;
+}
+.form .password{
+	background: url(../image/2.jpg) no-repeat 5px center ;
+}
+.botten{
+	margin: 0;
+	width: 100%;
+	padding: 10px 0px;
+	background: #004956;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-family: "宋体";
+}

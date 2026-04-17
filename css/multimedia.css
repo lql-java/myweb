@@ -1,0 +1,119 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fffae8;
+}
+nav{
+	width: 100%;
+	background: #004956;
+	z-index: 10;
+	position: fixed;
+	top: 0px;
+}
+nav .navcon{
+	margin: 0px auto;
+	width: 1200px;
+	display: flex;
+	list-style-type: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+nav .navcon li{
+	width: 120px;
+	float: left;
+}
+nav .navcon li a{
+	display: block;
+	width: 120px;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+}
+.video {
+	margin-top: 45px;
+	text-align: center;
+	z-index: 11;
+}
+/* 自然风光板块 */
+.scenery {
+	width: 68%;
+	margin: 80px auto;
+}
+
+.scenery h2 {
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 40px;
+	color: #2a9d8f;
+}
+/* 固定搭配图片,可以复制到其他网页 */
+.scenery-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+.scenery-card {
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.scenery-card:hover {
+	transform: translateY(-10px);
+}
+
+.scenery-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.scenery-card p {
+	padding: 15px;
+	font-size: 16px;
+	text-align: center;
+}
+.music{
+	width: 68%;
+	margin: 10px auto;
+	position: relative;
+}
+.music h2,.music p{
+	text-align: center;
+	margin-bottom: 10px;
+	color: #2a9d8f;
+	width: 100%;
+}
+/* .music .music1{
+	width: 100%;
+	position: relative;
+} */
+.music.music1{
+	/* 设置音频的区域 */
+	width:100%;
+	height: 30px;
+	
+}
+.music .music1 audio{
+	float: left;
+	width: 300px;
+	height: 30px;
+	margin-left: 220px;
+	margin-bottom: 20px;
+} 
+/* 底部详情 */
+.botten {
+	clear: both;
+	padding: 10px 0px;
+	background: #004956;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-family: "宋体";
+}

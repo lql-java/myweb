@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>3D动画</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				background: black;
+				overflow: hidden;
+			}
+			/* 3D动画容器 */
+			.magic {
+				transform-style: preserve-3d;
+				animation: rotate 60s linear infinite;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			@keyframes rotate {
+				50% {
+					transform-origin: center center;
+					transform: rotateY(3600deg) rotateX(3600deg);
+				}
+			}
+			/* 图片适配 - 使用相对单位 */
+			.magic img {
+				width: clamp(100px, 40vw, 300px);
+				height: auto;
+				object-fit: cover;
+			}
+			.magic_a {
+				transform: translateZ(-clamp(50px, 15vw, 150px));
+				margin: clamp(50px, 20vw, 300px);
+			}
+			.magic_b {
+				transform: rotateY(90deg) translateX(clamp(50px, 15vw, 150px));
+				transform-origin: right;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotateY(90deg) translateX(clamp(50px, 15vw, 150px));
+			}
+			.magic_c {
+				transform: rotateY(270deg) translateX(-clamp(50px, 15vw, 150px));
+				transform-origin: left;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotateY(270deg) translateX(-clamp(50px, 15vw, 150px));
+			}
+			.magic_d {
+				position: absolute;
+				transform: translateZ(clamp(50px, 15vw, 150px));
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) translateZ(clamp(50px, 15vw, 150px));
+			}
+			.magic_e {
+				transform: rotateX(270deg) translateX(-clamp(50px, 15vw, 150px)) translateY(clamp(50px, 15vw, 150px));
+				transform-origin: bottom;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotateX(270deg) translateX(-clamp(50px, 15vw, 150px)) translateY(clamp(50px, 15vw, 150px));
+			}
+			.magic_f {
+				transform: rotateX(90deg) translateZ(-clamp(50px, 15vw, 150px)) translateY(-clamp(50px, 15vw, 150px));
+				transform-origin: top;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotateX(90deg) translateZ(-clamp(50px, 15vw, 150px)) translateY(-clamp(50px, 15vw, 150px));
+			}
+			/* 底部信息 */
+			.botten {
+				margin-top: auto;
+				padding: 10px 0px;
+				background: #004956;
+				text-align: center;
+				color: #FFFFFF;
+				font-size: clamp(0.75rem, 2vw, 0.875rem);
+				font-family: "宋体";
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="magic">
+			<img class="magic_a" src="images/photo.png" alt="" />
+			<img class="magic_b" src="images/photo.png" alt="" />
+			<img class="magic_c" src="images/photo.png" alt="" />
+			<img class="magic_d" src="images/photo.png" alt="" />
+			<img class="magic_e" src="images/photo.png" alt="" />
+			<img class="magic_f" src="images/photo.png" alt="" />
+		</div>
+		
+		<div class="botten">
+			<span>专业：移动应用开发</span>
+			<span>班级：2班</span>
+			<span>学号：250403059</span>
+			<span>姓名：李青林</span><br>
+			<span>联系方式：15572402675</span>
+			<span>邮箱：liqinglin20021.outlook.com</span>
+		</div>
+	</body>
+</html>

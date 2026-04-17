@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>注册</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				background: #f5f5f5;
+			}
+			/* 背景图适配 */
+			.image {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				opacity: 0.2;
+				z-index: -1;
+			}
+			/* 表单容器 */
+			.form {
+				width: 90%;
+				max-width: 400px;
+				margin: 2rem auto;
+				background: #fff;
+				padding: 2rem 1.5rem;
+				border-radius: 12px;
+				box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			}
+			/* 表单输入框 */
+			form input {
+				width: 100%;
+				padding: 0.8rem 1rem;
+				margin-bottom: 1rem;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				font-size: 1rem;
+				outline: none;
+			}
+			form input:focus {
+				border-color: #007bff;
+				box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+			}
+			/* 按钮样式 */
+			.submit {
+				background: #007bff;
+				color: #fff;
+				border: none;
+				font-weight: bold;
+				cursor: pointer;
+				transition: background 0.3s;
+			}
+			.submit:hover {
+				background: #0056b3;
+			}
+			.reset {
+				background: #6c757d;
+				color: #fff;
+				border: none;
+				cursor: pointer;
+				transition: background 0.3s;
+			}
+			.reset:hover {
+				background: #545b62;
+			}
+			/* 登录链接 */
+			.login {
+				text-align: center;
+				margin-top: 1rem;
+			}
+			.login a {
+				color: #007bff;
+				text-decoration: none;
+			}
+			.login a:hover {
+				text-decoration: underline;
+			}
+			/* 底部信息 */
+			.botten {
+				margin-top: auto;
+				background: #f5f5f5;
+				padding: 1rem;
+				text-align: center;
+				font-size: clamp(0.75rem, 2vw, 0.875rem);
+				color: #666;
+				line-height: 1.8;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="image/background.png" alt="" class="image"/>
+		<div class="form">
+			<form action="#" method="get" autocomplete="on" name="Userlog">
+				<input type="text" name="UserName" placeholder="请输入名称" required class="name" /><br>
+				<input type="tel" name="tel" placeholder="请输入电话号码" required class="tel"><br>
+				<input type="email" name="UserEmail" placeholder="请输入邮箱" class="email"><br>
+				<input type="text" name="UserCheck" placeholder="请输入验证码" required class="check" /><br>
+				<input type="password" name="UserPassword" placeholder="请输入密码" required class="password" /><br>
+				<input type="submit" name="UserSubmit" value="提交" class="submit" /><br>
+				<input type="reset" name="UserReset" class="reset" />
+				<div class="login">
+					<a href="#" target="_blank">登录</a>
+				</div>
+			</form>
+		</div>
+		
+		<!-- 版权信息 -->
+		<div class="botten">
+			<span>专业：移动应用开发</span>
+			<span>班级：2班</span>
+			<span>学号：250403059</span>
+			<span>姓名：李青林</span><br>
+			<span>联系方式：15572402675</span>
+			<span>邮箱：liqinglin20021.outlook.com</span>
+		</div>
+	</body>
+</html>

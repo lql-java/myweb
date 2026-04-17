@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>多媒体</title>
+		<style type="text/css">
+			/* 全局样式 */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				background: #f5f5f5;
+			}
+			/* 导航栏 */
+			nav {
+				width: 100%;
+				background: #fff;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+				padding: 0.5rem;
+			}
+			.navcon {
+				display: flex;
+				list-style: none;
+				overflow-x: auto;
+				gap: 0.5rem;
+				padding: 0.5rem 0;
+			}
+			.navcon li a {
+				text-decoration: none;
+				color: #333;
+				padding: 0.5rem 1rem;
+				font-size: clamp(0.875rem, 2vw, 1rem);
+				white-space: nowrap;
+				background: #f8f9fa;
+				border-radius: 8px;
+			}
+			.navcon li a:hover {
+				background: #e9ecef;
+			}
+			/* 视频区域 */
+			.video {
+				width: 100%;
+				height: clamp(150px, 40vw, 300px);
+				overflow: hidden;
+			}
+			.video video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			/* 通用板块样式 */
+			.scenery, .music {
+				padding: 1.5rem 1rem;
+			}
+			h2 {
+				font-size: clamp(1.25rem, 4vw, 1.75rem);
+				text-align: center;
+				margin-bottom: 1rem;
+				color: #333;
+			}
+			/* 图片卡片容器 */
+			.scenery-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1rem;
+				margin-top: 1rem;
+			}
+			.scenery-card {
+				background: #fff;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			}
+			.scenery-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+			.scenery-card p {
+				padding: 0.8rem;
+				font-size: clamp(0.875rem, 2vw, 1rem);
+				text-align: center;
+			}
+			/* 音乐区域 */
+			.music {
+				margin-top: 1rem;
+			}
+			.music p {
+				text-align: center;
+				font-size: clamp(1rem, 2vw, 1.25rem);
+				margin-bottom: 1rem;
+			}
+			.music1 {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				align-items: center;
+			}
+			.music1 audio {
+				width: 90%;
+				max-width: 400px;
+			}
+			/* 底部信息 */
+			.botten {
+				margin-top: auto;
+				background: #f5f5f5;
+				padding: 1rem;
+				text-align: center;
+				font-size: clamp(0.75rem, 2vw, 0.875rem);
+				color: #666;
+				line-height: 1.8;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul class="navcon">
+				<li><a href="index.html">主页</a></li>
+				<li><a href="#video">自动视频</a></li>
+				<li><a href="#phop">图像</a></li>
+				<li><a href="#music">音频</a></li>
+				<li><a href="donghua.html" target="_blank">css动画</a></li>
+			</ul>
+		</nav>
+		
+		<!-- 嵌入视频 静态播放-->
+		<div class="video" id="video">
+			<!-- 核心：autoplay + muted 必须同时存在 -->
+			<video autoplay muted playsinline loop>
+				<!-- 替换成你的视频地址，推荐MP4格式 -->
+				<source src="video/yslc.mp4" type="video/mp4">
+				你的浏览器不支持HTML5视频播放，请升级浏览器
+			</video>
+		</div>
+		
+		<!-- 图像板块 -->
+		<section class="scenery" id="phop">
+			<h2>自然风光 美不胜收</h2>
+			<div class="scenery-container">
+				<div class="scenery-card">
+					<img src="image/sanxia.jpg" alt="三峡大坝">
+					<p>三峡大坝——世界最大的水利枢纽工程</p>
+				</div>
+				<div class="scenery-card">
+					<img src="image/snj.jpg" alt="神农架">
+					<p>神农架——神秘的原始森林，天然氧吧</p>
+				</div>
+				<div class="scenery-card">
+					<img src="image/wds.jpg" alt="武当山">
+					<p>武当山——道教圣地，山峦奇秀</p>
+				</div>
+				<div class="scenery-card">
+					<img src="image/donghu.png" alt="东湖">
+					<p>东湖——中国最大的城中湖，风景如画</p>
+				</div>
+				<div class="scenery-card">
+					<img src="image/lichuan.jpg" alt="利川">
+					<p>利川——山水利川，清凉之都</p>
+				</div>
+				<div class="scenery-card">
+					<img src="image/xiangyang.png" alt="襄阳">
+					<p>襄阳——华夏第一城池，威震古今</p>
+				</div>
+			</div>
+		</section>
+		
+		<!-- 音频板块 -->
+		<div class="music" id="music">
+			<h2>心灵的飞翔，让我们沉醉，无法抗拒。</h2>
+			<p>音乐</p>
+			<div class="music1">
+				<audio controls>
+				  <source src="music/jymusic.mp3" type="audio/mpeg">
+				  你的浏览器不支持 audio 标签。
+				</audio>
+				<audio controls>
+				  <source src="music/jymusic.mp3" type="audio/mpeg">
+				  你的浏览器不支持 audio 标签。
+				</audio>
+			</div>
+		</div>
+		
+		<!-- 底部信息 -->
+		<div class="botten">
+			<span>专业：移动应用开发</span>
+			<span>班级：2班</span>
+			<span>学号：250403059</span>
+			<span>姓名：李青林</span><br>
+			<span>联系方式：15572402675</span>
+			<span>邮箱：liqinglin20021.outlook.com</span>
+		</div>
+	</body>
+</html>
